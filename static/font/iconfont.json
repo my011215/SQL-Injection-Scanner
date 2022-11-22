@@ -1,0 +1,65 @@
+{
+  "id": "3654720",
+  "name": "主页图标",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2129910",
+      "name": "查找相似",
+      "font_class": "chazhaoxiangsi",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "3865267",
+      "name": "查找",
+      "font_class": "chazhao",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "4722202",
+      "name": "查找",
+      "font_class": "chazhao1",
+      "unicode": "e663",
+      "unicode_decimal": 58979
+    },
+    {
+      "icon_id": "6834934",
+      "name": "文件-查找内容",
+      "font_class": "wj-cznr",
+      "unicode": "e792",
+      "unicode_decimal": 59282
+    },
+    {
+      "icon_id": "22561964",
+      "name": "环保平台-检查表",
+      "font_class": "huanbaopingtai-jianchabiao",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "4163423",
+      "name": "主页",
+      "font_class": "zhuye",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "5936359",
+      "name": "主页",
+      "font_class": "zhuye1",
+      "unicode": "e667",
+      "unicode_decimal": 58983
+    },
+    {
+      "icon_id": "7638794",
+      "name": "主页",
+      "font_class": "zhuye2",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    }
+  ]
+}

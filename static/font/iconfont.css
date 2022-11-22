@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3654720 */
+  src: url('iconfont.woff2?t=1663725840122') format('woff2'),
+       url('iconfont.woff?t=1663725840122') format('woff'),
+       url('iconfont.ttf?t=1663725840122') format('truetype');
+}
+
+.iconfont {
+  color:black;
+  position:absolute;
+  right:5vh;
+  font-family: "iconfont" !important;
+  font-size: 7vh;
+  font-weight:bolder;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont1 { /*注入类型图标*/
+  color:black;
+  position:absolute;
+  top:0.5vh;
+  right:2vh;
+  font-family: "iconfont" !important;
+  font-size: 6vh;
+  font-weight:400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont2 { /*查表图标*/
+  top:0.5vh;
+  color:black;
+  position:absolute;
+  right:9vh;
+  font-family: "iconfont" !important;
+  font-size: 6vh;
+  font-weight:400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont3 { /*查字段图标*/
+  top:0.5vh;
+  color:black;
+  position:absolute;
+  right:16vh;
+  font-family: "iconfont" !important;
+  font-size: 6vh;
+  font-weight:300;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-chazhaoxiangsi:before {
+  content: "\e600";
+}
+
+.icon-chazhao:before {
+  content: "\e601";
+}
+
+.icon-chazhao1:before {
+  content: "\e663";
+}
+
+.icon-wj-cznr:before {
+  content: "\e792";
+}
+
+.icon-huanbaopingtai-jianchabiao:before {
+  content: "\e603";
+}
+
+.icon-zhuye:before {
+  content: "\e666";
+}
+
+.icon-zhuye1:before {
+  content: "\e667";
+}
+
+.icon-zhuye2:before {
+  content: "\e610";
+}
+#header a{
+  text-decoration: none;
+}

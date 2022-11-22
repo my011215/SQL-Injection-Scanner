@@ -1,0 +1,249 @@
+*{margin: 0;padding: 0;}
+body{
+    display: flex;
+	flex-direction: column;
+	min-height: 100vh; 
+    background-color:#D7DFE8;
+    width:100%;
+}
+#header{
+    background-color:#ADB8D4;
+    height:7vh;
+    width:100%;
+}
+.hcqStyle2{
+    display:inline-block;
+    font-size:4vh;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:bold;color:#D7DFE8;
+    text-shadow:0 0 1px currentColor,-1px -1px 3px #000,0 -1px 3px #000,1px -1px 3px #000,1px 0 3px #000,1px 1px 3px #000,0 1px 3px #000,-1px 1px 3px #000,-1px 0 3px #000;
+    -webkit-filter:url(#diff1);filter:url(#diff1);}
+#p1{
+    position:absolute;
+    line-height: 7vh;
+    font-size: 5vh;
+    left:3vh;
+}
+#p2{
+    position:absolute;
+    line-height: 7vh;
+    font-size:3vh;
+    left:10vh;
+}
+#box1{
+    position:absolute;
+    top:10%;
+    left:10%;
+    width:80%;
+    height:80%;
+}
+/*注入网址：*/
+#pbox1{
+    position:absolute;
+    top:0%;
+    height:6%;
+    left:0%;
+    width:100%;
+}
+#form1{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*提交类型*/
+#pbox2{
+    position:absolute;
+    top:10%;
+    height:6%;
+    left:0%;
+    width:100%;
+}
+#form2{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*查找字段*/
+#pbox3{
+    position:absolute;
+    top:20%;
+    height:6%;
+    left:0%;
+    width:100%;
+}
+#form3{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*字段值*/
+#pbox4{
+    position:absolute;
+    top:30%;
+    height:6%;
+    left:0%;
+    width:100%;
+}
+#form4{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*其他字段*/
+#pbox5{
+    position:absolute;
+    top:40%;
+    height:6%;
+    left:0%;
+    width:100%;
+}
+#form5{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*注入类型*/
+#pbox6{
+    position:absolute;
+    top:50%;
+    height:6%;
+    left:0%;
+    width:100%;
+}
+#form6{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*闭合符号*/
+#pbox7{
+    position:absolute;
+    top:60%;
+    height:6%;
+    left:0%;
+    width:100%;
+}
+#form7{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*折叠框*/
+#box2{
+    position:absolute;
+    top:70%;
+    left:0%;
+    height:30%;
+    width:100%;
+    display:none;
+}
+/*屏蔽符号*/
+#pbox8{
+    position:absolute;
+    top:0%;
+    height:20%;
+    left:0%;
+    width:100%;
+}
+#form8{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*绕过符号*/
+#pbox9{
+    position:absolute;
+    top:33.4%;
+    height:20%;
+    left:0%;
+    width:100%;
+}
+#form9{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+/*payload*/
+#pbox10{
+    position:absolute;
+    top:66.8%;
+    height:20%;
+    left:0%;
+    width:100%;
+}
+#form10{
+    position:absolute;
+    border: none;
+    top:0%;
+    width:85%;
+    height:100%;
+    left:15%;
+    font-size:larger;
+}
+.slide{
+    position:absolute;
+    top:63%;
+    right:10%;
+    font-size:2vh;
+    color:black;
+}
+.btn-slide {
+    text-align: center;
+    display: block;
+    color:black;
+    text-decoration: none;
+}
+#box3{
+    position:absolute;
+    top:90%;
+    right:10%;
+    width:8%;
+    height:5%;
+    background-color: #D7DFE8;
+    font-size: 4vh;
+    text-align: center;
+    border: none;
+}
+#submit1{
+    border: 0.3vh solid #ADB8D4;
+    width:100%;
+    height:100%;
+    text-align: center;
+    background-color: #D7DFE8;
+}

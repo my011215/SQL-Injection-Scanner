@@ -1,0 +1,171 @@
+*{margin: 0;padding: 0;}
+body{
+    display: flex;
+	flex-direction: column;
+	min-height: 100vh; 
+    background-color:#D7DFE8;
+    width:100%;
+}
+#header{
+    background-color:#ADB8D4;
+    height:7vh;
+    width:100%;
+}
+.hcqStyle2{
+    display:inline-block;
+    font-size:5vh;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:bold;color:#D7DFE8;
+    text-shadow:0 0 1px currentColor,-1px -1px 3px #000,0 -1px 3px #000,1px -1px 3px #000,1px 0 3px #000,1px 1px 3px #000,0 1px 3px #000,-1px 1px 3px #000,-1px 0 3px #000;
+    -webkit-filter:url(#diff1);filter:url(#diff1);}
+#p1{
+    position:absolute;
+    line-height: 7vh;
+    font-size: 5vh;
+    height: 7vh;
+    left:2vh;
+    size: 20%;
+}
+#p2{
+    position:absolute;
+    line-height: 7vh;
+    font-size:3vh;
+    left:13vh;
+}
+/*请输入网址*/
+#box1{
+    position:absolute;
+    top:15%;
+    left:10%;
+    width:80%;
+}
+.form1{
+    width:80vh;
+    position: absolute;
+    left:24vh;
+}
+#text1{
+    box-shadow: 1vh 1vh 1vh grey;
+}
+#text1 input{
+    width:100%;
+    height:7vh;
+    border: 2vh black;
+    font-size: larger;
+    text-align: center;
+}
+/*扫描字段*/
+#box2{
+    position:absolute;
+    top:32%;
+    left:10%;
+    width:26%;
+}
+.form2{
+    position: absolute;
+    width:26%;
+    top:0%;
+    left:0%;
+}
+#text2 input{
+    width:40%;
+    height:7vh;
+    border: 2vh black;
+    font-size: larger;
+    text-align: center;
+}
+/*字段值*/
+#box10{
+    position:absolute;
+    top:32%;
+    left:39%;
+    width:26%;
+}
+.form5{
+    position: absolute;
+    width:26%;
+    top:0%;
+    left:0%;
+}
+#text4 input{
+    width:40%;
+    height:7vh;
+    border: 2vh black;
+    font-size: larger;
+    text-align: center;
+}
+/*提交类型*/
+#box3{
+    position:absolute;
+    top:32%;
+    left:66%;
+    width:24%;
+}
+.form3{
+    position: absolute;
+    width:24%;
+    top:0%;
+    left:0%;
+}
+#text3 select{
+    position:absolute;
+    width:40%;
+    height:7vh;
+    border: 2vh black;
+    font-size: larger;
+    right:0%;
+}
+/*其他字段*/
+#box5{
+    position:absolute;
+    top:43%;
+    left:10%;
+    width:80%;
+    height:30%;
+}
+#box6{
+    position: absolute;
+    top:0%;
+    left:17%;
+    background-color: #FFFFFF;
+    width:83%;
+    height:100%;
+}
+#form4{
+    position: absolute;
+    top:0%;
+    left:0%;
+    background-color: #FFFFFF;
+    width:100%;
+    height:100%;
+    border:none;
+    font-size: larger;
+    text-align:center;
+}
+#submit{
+    position:absolute;
+    top:0;
+}
+#box4{
+    position: absolute;
+    left:50%;
+    top:78%;
+    height:15%;
+    width:40%;
+}
+#submit1{
+    width:35%;
+    height:70%;
+    background-color: #ADB8D4;
+    border: #ADB8D4;
+    border-radius: 4vh;
+}
+#submit2{
+    position:absolute;
+    right:0;
+    width:35%;
+    height:70%;
+    background-color: #ADB8D4;
+    border: #ADB8D4;
+    border-radius: 4vh;
+}
