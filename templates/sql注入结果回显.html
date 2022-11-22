@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./static/sql.js" ></script>
+    <head>
+        <link rel = "stylesheet" type="text/css" href="./static/noprogress1.css">
+        <script src="./static/noprogress.js"></script>
+        <title>漏洞扫描2</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" type="text/css" href="./static/sql注入结果回显.css">
+        <link rel = "stylesheet" type="text/css" href="./static/font/iconfont.css">
+    </head>
+    <body>
+        <div id = "header">
+            <p id="p1">G</p>
+            <p id="p2">SQL注入</p>
+            <a href="/SQL1"><span class="iconfont3">&#xe603;</span></a><!--注入类型图标-->
+            <a href="/SQL3"><span class="iconfont2">&#xe792;</span></a><!--查表图标-->
+            <a href="/SQL4"><span class="iconfont1">&#xe600;</span></a><!--查字段图标-->
+        </div>
+        <div id="box1">
+            <p class="hcqStyle2">注入网址：</p>
+            <form name="input" action="" method="" class="form1">
+                <input type="text" value='{{url}}' readonly="readonly">
+            </form>
+        </div>
+        <div id="box2">
+            <p class="hcqStyle2">注入进度：</p>
+            <form name="input" action="" method="" class="form2">
+                <input id="" type="text" readonly="readonly">
+            </form>
+        </div>
+        <div id="box3">
+            <p class="hcqStyle2">注入类型：</p>
+            <form name="input" action="" method="" class="form3">
+                <input id="" type="text" readonly="readonly">
+            </form>
+        </div>
+        <div id="box4">
+            <p class="hcqStyle2">查找字段：</p>
+            <form name="input" action="" method="" class="form4">
+                <input id="" type="text" value='{{id}}' readonly="readonly">
+            </form>
+        </div>
+        <div id="box5">
+            <p id="p3">扫描结果回显</p>
+        </div>
+        <div id="box6">
+            <form>
+                <textarea id="form5"readonly="readonly"></textarea>
+            </form>
+        </div>
+        <div id="box7"><!--输入查询表名：-->
+            <p class="hcqStyle2">输入查询表名：</p>
+            <form name="input" action="/SQL4" method="POST" id="SQL4">
+                <input type="text" id="form6" name="tableName">
+            </form>
+        </div>
+        <div id="box8">
+            <input  id="submit1" type="button" onclick="SQL4()"  value="下一步" class="hcqStyle2">
+        </div>
+    </body>
+<script>
+    function SQL4()
+    {
+        var x=document.getElementById('SQL4');
+        x.submit();
+    }
+</script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>sql注入抽屉</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" type="text/css" href="./static/sql注入抽屉.css">
+        <link rel = "stylesheet" type="text/css" href="./static/font/iconfont.css">
+    </head>
+    <body>
+        <div id = "header">
+            <p id="p1">G</p>
+            <p id="p2">SQL注入</p>
+            <a href="/"><span class="iconfont">&#xe667;</span></a><!--返回主页图标-->
+        </div>
+        <div id="box1">
+            <p class="hcqStyle2">扫描网址：</p>
+            <form name="input" action="" method="" class="form1">
+                <input value="{{url}}" readonly="readonly" type="text">
+            </form>
+        </div>
+        <div id="box2"><!--大框-->
+            <ul class="u1"><!--数字型和字符型的列表-->
+                <li id="li1"> <!--数字型-->
+                    <input type="radio" name="changeTab" id="t1" checked="check">
+                    <label for="t1">GET</label>
+                    <div id="box3">
+                    <div id="QA-list">
+                        <ul id="QA-ul" class="u2"><!--数字型列表-->
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">联合注入</a>
+                                <p style="display: none;"id="b1">database:{{re['getUnionDatabase']}}<br>table:{{re['getUnionTable']}}
+                                    <br>column:{{re['getUnionColumn']}}<br>data:{{re['getUnionData']}}</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">报错注入</a>
+                                <p style="display: none;"id="b2">database:{{re['getErrorDatabase']}}<br>table:{{re['getErrorTable']}}
+                                    <br>column:{{re['getErrorColumn']}}<br>data:{{re['getErrorData']}}</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">布尔盲注</a>
+                                <p style="display: none;"id="b7">database:{{re['getBoolDatabase']}}<br>table:{{re['getBoolTable']}}
+                                    <br>column:{{re['getBoolColumn']}}<br>data:{{re['getBoolData']}}</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">时间盲注</a>
+                                <p style="display: none;"id="b4">database:{{re['getTimeDatabase']}}<br>table:{{re['getTimelTable']}}
+                                    <br>column:{{re['getTimeColumn']}}<br>data:{{re['getTimeData']}}</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                         var ul = document.getElementById("QA-ul");
+         var ulChildren = ul.children;
+         for (var i = 0; i < ulChildren.length; i++) {
+           ulChildren[i].onclick = function (event) {
+             event = event || window.event;
+             if(event.target.className == "QA-a"){
+               if (this.children[1].style.display == "none") {
+                 this.children[1].style.display = "block";
+               } else {
+                 this.children[1].style.display = "none";
+               }
+             }
+             }
+         }
+                    </script>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="changeTab" id="t2">
+                    <label for="t2">POST</label><!--字符型列表-->
+                    <div id="box3">
+                        <div id="QA-list">
+                            <ul id="QA-u2" class="u2">
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">联合注入</a>
+                                    <p style="display: none;"id="b11">database:{{re['postUnionDatabase']}}<br>table:{{re['postUnionTable']}}
+                                    <br>column:{{re['postUnionColumn']}}<br>data:{{re['postUnionData']}}</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">报错注入</a>
+                                    <p style="display: none;"id="b12">database:{{re['postErrorDatabase']}}<br>table:{{re['postErrorTable']}}
+                                    <br>column:{{re['postErrorColumn']}}<br>data:{{re['postErrorData']}}</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">布尔盲注</a>
+                                    <p style="display: none;"id="b17">database:{{re['postBoolDatabase']}}<br>table:{{re['postBoolTable']}}
+                                    <br>column:{{re['postBoolColumn']}}<br>data:{{re['postBoolData']}}</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">时间盲注</a>
+                                    <p style="display: none;"id="b14">database:{{re['postTimeDatabase']}}<br>table:{{re['postTimelTable']}}
+                                    <br>column:{{re['postTimeColumn']}}<br>data:{{re['postTimeData']}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <script>
+                            var u2 = document.getElementById("QA-u2");
+            var u2Children = u2.children;
+            for (var i = 0; i < u2Children.length; i++) {
+              u2Children[i].onclick = function (event) {
+                event = event || window.event;
+                if(event.target.className == "QA-a"){
+                  if (this.children[1].style.display == "none") {
+                    this.children[1].style.display = "block";
+                  } else {
+                    this.children[1].style.display = "none";
+                  }
+                }
+                }
+            }
+                       </script>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

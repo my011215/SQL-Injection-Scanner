@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SQL注入</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" type="text/css" href="./static/sql注入复选框.css">
+    </head>
+    <body>
+        <div id = "header">
+            <p id="p1">G</p>
+            <p id="p2">SQL注入</p>
+        </div>
+        <div id="box1"><!--扫描网址-->
+            <p class="hcqStyle2">扫描网址：</p>
+            <form name="input" action="" method="" class="form1">
+                <input type="text" value='{{url}}' readonly="readonly">
+            </form>
+        </div>
+        <div id="box2"><!--查找字段-->
+            <p class="hcqStyle2">查找字段：</p>
+            <form name="input" action="" method="" class="form2">
+                <input type="text" value='{{id}}' readonly="readonly">
+            </form>
+        </div>
+        <div id ="box3"><!--选择框-->
+            <p id="p3">请选择注入类型：</p>
+            <div id="box4"><!--复选框-->
+                <form action="/SQL3" method="POST" class="form3" id="SQL3">
+                    <input type="checkbox" name="check" value="union"><div class="checkbox"id="check1"><p class="pcheck">联合注入</p></div><br>
+                    <input type="checkbox" name="check" value="error"><div class="checkbox"id="check3"><p class="pcheck">报错注入</p></div><br>
+                    <input type="checkbox" name="check" value="bool"><div class="checkbox"id="check4"><p class="pcheck">布尔盲注</p></div><br>
+                    <input type="checkbox" name="check" value="time"><div class="checkbox"id="check5"><p class="pcheck">时间盲注</p></div><br>
+                </form>
+            </div>
+            <div id="box5">
+                <a href="./SQL2"><p class="hcqStyle2"style="font-size:4vh;">手动配置</p></a>
+            </div>
+            <div id="box6">
+                <a href="javascript:;" onclick="SQL3();"><p class="hcqStyle2"style="font-size:4vh;">确定</p></a>
+            </div>
+        </div>
+    </body>
+<script>
+    function SQL3()
+    {
+        var x=document.getElementById('SQL3');
+        x.submit();
+    }
+</script>
+</html>

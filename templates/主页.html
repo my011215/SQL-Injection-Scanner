@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <link rel = "stylesheet" type="text/css" href="./static/主页.css">
+    </head>
+    <body>
+        <div id = "header">
+            <p ><img id="p1" src="./static/images/BJX2.png"> </p>
+            <p id="p2">SQL注入</p>
+        </div>
+        <form name="input" action="" method="POST" id="search1" >
+        <div class ="box" id="box1" class="form1">
+            <p class="hcqStyle2">请输入网址：</p>
+                <div id="text1">
+                    <input type="text" name="url1">   <!--输入网址框-->
+                </div>
+        </div>
+        <div class ="box" id="box2" class="form2">   <!--扫描字段-->
+            <p class="hcqStyle2">扫描字段：</p>
+                <span id="text2">
+                    <input type="text" name="id1">
+                </span>
+        </div>
+         <div class ="box" id="box10">
+            <p class="hcqStyle2" class="p4">字段值：</p>                          <!--字段值-->
+                <span id="text4">
+                    <input type="text" name="value1">
+                </span>
+        </div>
+        <div class ="box" id="box3">
+            <p class="hcqStyle2" id="p4">提交类型：</p>     <!--提交类型-->
+                <span id="text3">
+                    <select name="method1">
+                    <option selected disabled hidden style="display: none" value=""></option>
+                    <option value="post">post</option>
+                    <option value="get">get</option>
+                    </select>
+                </span>
+        </div>
+        <div id="box5">
+            <p class="hcqStyle2" id="p4">其他字段：</p><!--其他字段-->
+            <div id="box6">
+                    <input type="text" id="form4" name="column1">
+            </div>
+        </div>
+        <div id="box4">
+                <input  id="submit1" type="button" onclick="Search2();"  value="漏洞扫描" class="hcqStyle2">
+                <input id="submit2" type="button" onclick="Search1();" value="SQL注入" class="hcqStyle2">
+        </div>
+        </form>
+    </body>
+<script>
+    function Search2()
+    {
+        var x=document.getElementById('search1');
+        x.action='/BugSearch2';
+        x.submit();
+    }
+    function Search1()
+    {
+        var x=document.getElementById('search1');
+        x.action='/judge';
+        x.method='get';
+        x.submit();
+    }
+
+</script>
+</html>

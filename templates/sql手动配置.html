@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>首页</title>
+        <link rel = "stylesheet" type="text/css" href="./static/sql手动配置.css">
+    </head>
+    <script>
+
+function showdiv()  {
+    document.getElementById("box2").style.display = "block";
+ 
+    document.getElementById('strHref').innerHTML="收起";
+    document.getElementById('strHref').href="javascript:hidediv();";
+}
+function hidediv() {
+    document.getElementById('box2').style.display='none';
+    document.getElementById('strHref').innerHTML="更多配置";
+    document.getElementById('strHref').href="javascript:showdiv();";
+}
+
+    </script>
+    <body>
+        <div id = "header">
+            <p id="p1">G</p>
+            <p id="p2">SQL注入</p>
+        </div>
+        <form name="input" action="/handle" method="POST" id="handle" >
+        <div id="box1"><!--手动配置大框-->
+            <div id="pbox1"><!--注入网址：-->
+                <p class="hcqStyle2">注入网址：</p>
+                <!-- <form name="input" action="" method="" > -->
+                    <input type="text" id="form1" name="url" value=''>
+                <!-- </form> -->
+            </div>
+            <div id="pbox2"><!--提交类型：-->
+                <p class="hcqStyle2">提交类型：</p>
+                <!-- <form name="input" action="" method=""> -->
+                    <input type="text" id="form2" name="method" value=''>
+                <!-- </form> -->
+            </div>
+            <div id="pbox3"><!--查找字段：-->
+                <p class="hcqStyle2">查找字段：</p>
+                <!-- <form name="input" action="" method=""> -->
+                    <input type="text"id="form3" name="id" value=''>
+                <!-- </form> -->
+            </div>
+            <div id="pbox4"><!--查找字段：-->
+                <p class="hcqStyle2">字段值：</p>
+                <!-- <form name="input" action="" method=""> -->
+                    <input type="text"id="form4" name="value" value=''>
+                <!-- </form> -->
+            </div>
+            <div id="pbox5"><!--其他字段：-->
+                <p class="hcqStyle2">其他字段：</p>
+                <!-- <form name="input" action="" method=""> -->
+                    <input type="text" id="form5" name="column" value=''>
+                <!-- </form> -->
+            </div>
+            <div id="pbox6"><!--注入类型：-->
+                <p class="hcqStyle2">注释符号：</p>
+                <!-- <form name="input" action="" method=""> -->
+                    <input type="text" id="form6" name="exegesis" value=''>
+                <!-- </form> -->
+            </div>
+            <div id="pbox7"><!--闭合符号：-->
+                <p class="hcqStyle2">闭合符号：</p>
+                <!-- <form name="input" action="" method=""> -->
+                    <input type="text"id="form7" name="close" value=''>
+                <!-- </form> -->
+            </div>
+            <div id="box2"><!--折叠部分-->
+                <div id="pbox8"><!--屏蔽符号：-->
+                    <p class="hcqStyle2">字段数：</p>
+                    <!-- <form name="input" action="" method=""> -->
+                        <input type="text"id="form8" name="columnNum" value=''>
+                    <!-- </form> -->
+                </div>
+                <div id="pbox9"><!--绕过符号：-->
+                    <p class="hcqStyle2">显位：</p>
+                    <!-- <form name="input" action="" method=""> -->
+                        <input type="text" id="form9" name="position" value=''>
+                    <!-- </form> -->
+                </div>
+                <div id="pbox10"><!--payload：-->
+                    <p class="hcqStyle2">payload：</p>
+                    <!-- <form name="input" action="" method=""> -->
+                        <input type="text"id="form10" name="payload" value=''>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </div>
+        <p class="slide">
+            <a href="javascript:showdiv();"id="strHref" class="btn-slide">更多配置</a>
+        </p>
+    </form>
+    <div id="box3">
+        <input  id="submit1" type="button" onclick="handle()"  value="确定" class="hcqStyle2">
+    </div>
+    </body>
+<script>
+    function handle()
+    {
+        var x=document.getElementById('handle');
+        x.submit();
+    }
+
+</script>
+</html>

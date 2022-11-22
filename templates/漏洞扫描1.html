@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>漏洞扫描1</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" type="text/css" href="./static/漏洞扫描1.css">
+        <link rel = "stylesheet" type="text/css" href="./static/font/iconfont.css">
+    </head>
+    <body>
+        <div id = "header">
+            <p id="p1">G</p>
+            <p id="p2">SQL注入</p>
+            <a href="/"><span class="iconfont">&#xe667;</span></a><!--返回主页图标-->
+        </div>
+        <div id="box1">
+            <p class="hcqStyle2">扫描网址：</p>
+            <form name="input" action="" method="" class="form1">
+                <input type="text" value="{{url}}">
+            </form>
+        </div>
+        <div id="box2">
+            <ul class="u1">
+                <li id="li1">
+                    <input type="radio" name="changeTab" id="t1" checked="check">
+                    <label for="t1">数字型</label>
+                    <div id="box3">
+                    <div id="QA-list">
+                        <ul id="QA-ul" class="u2">
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">联合注入</a>
+                                <p style="display: none;"id="b1">payload:{{sqlIngection['数字型联合注入,测试语句']}}</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">报错注入</a>
+                                <p style="display: none;"id="b2">payload:{{sqlIngection['数字型报错注入,测试语句']}}</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">布尔盲注</a>
+                                <p style="display: none;"id="b7">payload1:{{sqlIngection['数字型布尔注入，测试语句1']}}<br>payload2:{{sqlIngection['数字型布尔注入，测试语句2']}}</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">时间盲注</a>
+                                <p style="display: none;"id="b4">payload:{{sqlIngection['数字型时间盲注，测试语句']}}</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">httpHeaderUser</a>
+                                <p style="display: none;"id="b5">payload:{{sqlIngection['']}}<br>注入类型:</p>
+                            </li>
+                            <li>
+                                <a  id="QA-a" class="QA-a" href="javascript:;">httpHeaderCookie</a>
+                                <p style="display: none;"id="b6">payload:{{sqlIngection['']}}<br>注入类型:</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <script>
+                         var ul = document.getElementById("QA-ul");
+         var ulChildren = ul.children;
+         for (var i = 0; i < ulChildren.length; i++) {
+           ulChildren[i].onclick = function (event) {
+             event = event || window.event;
+             if(event.target.className == "QA-a"){
+               if (this.children[1].style.display == "none") {
+                 this.children[1].style.display = "block";
+               } else {
+                 this.children[1].style.display = "none";
+               }
+             }
+             }
+         }
+
+                    </script>
+                    </div>
+
+            <!-- <div class="box6">
+                <div class="box7" id="b1"><p class="p3">联合注入</p><a href="#"><div class="box9">+</div><div class="box8" >payload:{{sqlIngection['数字型联合注入,测试语句']}}</div></a></div>
+                <div class="box7" id="b2"><p class="p3">布尔盲注</p><a href="#"><div class="box9">+</div><div class="box8">payload1:{{sqlIngection['数字型布尔注入，测试语句1']}}<br>payload2:{{sqlIngection['数字型布尔注入，测试语句2']}}</div></a></div>
+                <div class="box7" id="b7"><p class="p3">报错盲注</p><a href="#"><div class="box9">+</div><div class="box8">payload:{{sqlIngection['数字型报错注入,测试语句']}}</div></a></div>
+                <div class="box7" id="b4"><p class="p3">时间盲注</p><a href="#"><div class="box9">+</div><div class="box8">payload:{{sqlIngection['数字型时间盲注，测试语句']}}<br>注入类型:</div></a></div>
+                <div class="box7" id="b5"><p class="p3">httpHeaderUser</p><a href="#"><div class="box9">+</div><div class="box8">payload:{{sqlIngection['']}}<br>注入类型:</div></a></div>
+                <div class="box7" id="b6"><p class="p3">httpHeaderCookie</p><a href="#"><div class="box9">+</div><div class="box8">payload:{{sqlIngection['']}}<br>注入类型:</div></a></div>
+            </div> -->
+                </li>
+                <li>
+                    <input type="radio" name="changeTab" id="t2">
+                    <label for="t2">字符型</label>
+                    <div id="box3">
+                        <div id="QA-list">
+                            <ul id="QA-u2" class="u2">
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">联合注入</a>
+                                    <p style="display: none;"id="b11">payload:{{sqlIngection['字符型联合注入,测试语句']}}</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">报错注入</a>
+                                    <p style="display: none;"id="b12">payload:{{sqlIngection['字符型报错注入,测试语句']}}</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">布尔盲注</a>
+                                    <p style="display: none;"id="b17">payload1:{{sqlIngection['字符型布尔盲注，测试语句1']}}<br>payload2:{{sqlIngection['字符型布尔盲注，测试语句2']}}</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">时间盲注</a>
+                                    <p style="display: none;"id="b14">payload:{{sqlIngection['字符型时间盲注，测试语句']}}</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">httpHeaderUser</a>
+                                    <p style="display: none;"id="b15">payload:{{sqlIngection['']}}<br>注入类型:</p>
+                                </li>
+                                <li>
+                                    <a  id="QA-a" class="QA-a" href="javascript:;">httpHeaderCookie</a>
+                                    <p style="display: none;"id="b16">payload:{{sqlIngection['']}}<br>注入类型:</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <script>
+                            var u2 = document.getElementById("QA-u2");
+            var u2Children = u2.children;
+            for (var i = 0; i < u2Children.length; i++) {
+              u2Children[i].onclick = function (event) {
+                event = event || window.event;
+                if(event.target.className == "QA-a"){
+                  if (this.children[1].style.display == "none") {
+                    this.children[1].style.display = "block";
+                  } else {
+                    this.children[1].style.display = "none";
+                  }
+                }
+                }
+            }
+                       </script>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

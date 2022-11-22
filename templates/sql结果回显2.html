@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./static/column.js" ></script>
+    <head>
+        <link rel = "stylesheet" type="text/css" href="./static/noprogress1.css">
+        <script src="./static/noprogress.js"></script>
+        <title>查询表名</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" type="text/css" href="./static/sql结果回显2.css">
+        <link rel = "stylesheet" type="text/css" href="./static/font/iconfont.css">
+    </head>
+    <body>
+        <div id = "header">
+            <p id="p1">G</p>
+            <p id="p2">SQL注入</p>
+            <a href="/SQL1"><span class="iconfont3">&#xe603;</span></a><!--注入类型图标-->
+            <a href="/SQL3"><span class="iconfont2">&#xe792;</span></a><!--查表图标-->
+            <a href="/SQL4"><span class="iconfont1">&#xe600;</span></a><!--查字段图标-->
+        </div>
+        <div id="box1"><!--注入网址-->
+            <p class="hcqStyle2">注入网址：</p>
+            <form name="input" action="" method="" class="form1">
+                <input type="text" value='{{url}}' readonly="readonly">
+            </form>
+        </div>
+        <div id="box2"><!--注入进度-->
+            <p class="hcqStyle2">注入进度：</p>
+            <form name="input" action="" method="" class="form2">
+                <input id="" type="text" readonly="readonly">
+            </form>
+        </div>
+        <div id="box3"><!--注入类型-->
+            <p class="hcqStyle2">注入类型：</p>
+            <form name="input" action="" method="" class="form3">
+                <input id="" type="text" readonly="readonly">
+            </form>
+        </div>
+        <div id="box4"><!--查找字段-->
+            <p class="hcqStyle2">查找字段：</p>
+            <form name="input" action="" method="" class="form4">
+                <input id="" type="text" value="{{column_name}}" readonly="readonly">
+            </form>
+        </div>
+        <div id="box5"><!--扫描结果回显提示字框-->
+            <p id="p3">扫描结果回显</p>
+        </div>
+        <div id="box6"><!--结果回显框-->
+            <form>
+                <textarea id="form5"readonly="readonly"></textarea>
+            </form>
+        </div>
+        <form name="input" action="/SQL6" method="POST" id="SQL6">
+        </form>
+        <div id="box9"><!--下一步-->
+            <input  id="submit1" type="button" onclick="SQL6()"  value="下一步" class="hcqStyle2">
+        </div>
+    </body>
+<script>
+    function SQL6()
+    {
+        var x=document.getElementById('SQL6');
+        x.submit();
+    }
+</script>
+    </html>

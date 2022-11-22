@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="./static/test.js" ></script>
+    <head>
+        <link rel = "stylesheet" type="text/css" href="./static/noprogress.css">
+        <script src="./static/noprogress.js"></script>
+        <title>漏洞扫描2</title>
+        <meta charset="utf-8">
+        <link rel = "stylesheet" type="text/css" href="./static/漏洞扫描2.css">
+    </head>
+    <body>
+        <div id = "header">
+            <p id="p1">G</p>
+            <p id="p2">SQL注入</p>
+        </div>
+        <div id="box1">
+            <p class="hcqStyle2">扫描网址：</p>
+            <form name="input" action="" method="" class="form1">
+                <input type="text" value='{{url1}}' readonly="readonly" readonly="readonly">
+            </form>
+        </div>
+        <div id="box2">
+            <p class="hcqStyle2">扫描进度：</p>
+            <form ame="input" action="" method="" class="form2">
+                <input id="degree0" type="text" readonly="readonly">
+            </form>
+        </div>
+        <div id="box3">
+            <p class="hcqStyle2">当前扫描漏洞：</p>
+            <form name="input" action="" method="" class="form3">
+                <input id="Name0" type="text" readonly="readonly">
+            </form>
+        </div>
+        <div id="box4">
+            <p id="p3">扫描结果回显</p>
+        </div>
+        <div id="box5">
+            <form>
+                <textarea id="form4" readonly="readonly">{{answer}}</textarea>
+            </form>
+        </div>
+        <div id="box6">
+            <a href="/BugSearch1"><p class="hcqStyle2" style="font-size:4vh;">下一步</p>
+        </div>
+        <div id="value" src="{{answer}}"></div>
+    </body>
+</html>
